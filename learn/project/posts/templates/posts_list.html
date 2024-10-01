@@ -5,5 +5,19 @@ Posts_List
 {% endblock title %}
 
 {% block content %}
-<h1>Posts_List</h1>
+<section class="posts_list">
+{% for post in posts %}
+<div>
+    <h1 class="heading">
+        {{post.title}}
+    </h1>
+    <p>
+        {{post.body|truncatewords:0}}
+    </p>
+</div>
+<div>
+    <img src="{{post.banner.url}}" alt="{{ post.title }}" width="300" height="200">
+</div>
+{% endfor %}
+</section>
 {% endblock content %}
