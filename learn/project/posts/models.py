@@ -4,6 +4,7 @@ from django.db import models
 class Post(models.Model):
     title = models.CharField(max_length=250)
     body = models.TextField()
+    slug = models.SlugField(unique=True, blank=True)
     created = models.DateTimeField(auto_now_add=True)
     banner = models.ImageField(upload_to='posts/')
 
