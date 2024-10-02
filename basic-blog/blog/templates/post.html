@@ -3,18 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index</title>
+    <title>{{post.title}}</title>
 </head>
 <body>
-    {% for post in posts reversed %}
-    
-    <a href="{% url 'post' post.id %}">
+    <a href="/">
         {{post.title}}
-        {{post.body|truncatewords:20}}
+        {{post.body}}
         <img src="{{post.img.url}}" alt="" width="30">
         {{post.created|timesince}}
     </a>
-    
-    {% endfor %}
 </body>
 </html>

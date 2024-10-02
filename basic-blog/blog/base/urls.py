@@ -4,4 +4,5 @@ from .models import *
 
 urlpatterns = [
     path('', index, name='index'),
+    path('post/<str:pk>/', post, name='post')
 ]
