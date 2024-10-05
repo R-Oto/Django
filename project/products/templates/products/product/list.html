@@ -11,8 +11,8 @@ Shopping Cart
         <h2 class="font-bold">Categories: </h2>
         <ul>
             {% for category in categories %}
-            <li>
-                <a href="{% url 'products:product_list_by_category' category.slug %}">
+            <li class="pt-3">
+                <a class="" href="{% url 'products:product_list_by_category' category.slug %}">
                     {{category.name}}
                 </a>
             </li>
