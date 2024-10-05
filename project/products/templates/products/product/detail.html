@@ -1,9 +1,26 @@
 {% extends "base.html" %}
 
 {% block title %}
-detail
+{{product.name}}
 {% endblock title %}
 
 {% block content %}
+<div class="container mx-auto p-4 flex">
+    <div class="">
+        {% if product.image %}
+        <img src="{{ product.image.url }}" alt="{{ product.name }}" class="max-h-[80vh]" width="">
+        {% else %}
+        <p>The Image is not available</p>
+        {% endif %}
+        <h3 class="font-semibold">{{product.name}}</h3>
+        <p class="text-gray-800">{{product.description}}</p>
+        <p class="text-indigo-600">${{product.price}}</p>
 
+        <form>
+            <button class="bg-indigo-600 text-white p-2 rounded hover:bg-indigo-800 duration-300">
+                Add To Cart
+            </button>
+        </form>
+    </div>
+</div>
 {% endblock content %}
