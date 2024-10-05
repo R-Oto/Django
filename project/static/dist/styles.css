@@ -554,3 +554,27 @@ video {
   display: none;
 }
 
+.static {
+  position: static;
+}
+
+.m-0 {
+  margin: 0px;
+}
+
+.box-border {
+  box-sizing: border-box;
+}
+
+.block {
+  display: block;
+}
+
+.p-0 {
+  padding: 0px;
+}
+
+.text-center {
+  text-align: center;
+}
+
